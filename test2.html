@@ -1,5 +1,26 @@
 <html>
     <body>
         <h1>Test the Web Chat</h1>
+        <script>
+            window.lincWebChatAsyncInit = function() {
+                LincWebChat.init({
+                    "publicId": "2c401ad3-c1c0-11eb-9613-06d5a259194a",
+                    "shopperEmail": "alisher@letslinc.com",
+                    "shopperEmailHash": "asdf89zxcvnkasdf89zasdzv",
+                    "greeting": {
+                        "intro": "Hi, you are chatting with Linc automated assistant. What can I help you with today?",
+                        "get_started_button": "Chat Now"
+                    }
+                });
+            };
+
+            (function(d, s, id) {
+                var js, ljs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) { return; }
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect-staging.letslinc.com/v1/webChat.js";
+                ljs.parentNode.insertBefore(js, ljs);
+            }(document, "script", "linc-web-chat-js"));
+        </script>
     </body>
 </html>
